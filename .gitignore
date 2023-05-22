@@ -1,0 +1,7 @@
+.kdev4/
+*.kdev4
+
+build/
+src/*/CMakeFiles/
+src/*/*.cmake
+src/*/Makefile
