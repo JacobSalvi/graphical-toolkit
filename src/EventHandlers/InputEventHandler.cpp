@@ -11,7 +11,10 @@ void InputEventHandler::add_listener(EventType et, void (*foo)(Event, Widget*)){
 
 void InputEventHandler::call(EventType et, Event& event){
     if(et == EventType::KeyDown){
-        std::cout<<"inside call: "<<static_cast<KeyDownEvent&>(event).get_char()<<std::endl;
+        // TODO: handle backspace
+        char new_char = static_cast<KeyDownEvent&>(event).get_char();
+        std::cout<<"inside call: "<<new_char<<std::endl;
+        input->add_char(new_char);
     }
     if(type_to_listener.find(et) == type_to_listener.end()){
         return;

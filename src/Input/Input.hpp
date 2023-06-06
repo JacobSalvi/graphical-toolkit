@@ -25,8 +25,9 @@ class Input: public Widget{
             text_item->font = font->fid;
             set_event_handler();
         }
+
     public:
-        void add_char(char*);
+        void add_char(char c);
 
         static Input* create(Widget* parent);
 };
